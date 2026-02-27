@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jogo da Memória</title>
+	<link rel="shortcut icon" href="images/icone.ico" type="image/x-icon">
+	
+	<style>
+	body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		text-align: center;
+		background-image: url('images/background2.jpg');
+		background-size: cover;
+		background-position: center;
+	}
+
+	h1 {
+		color: white;
+		font-size: 3em;
+		margin-bottom: 0.5em;
+		background-image: url('images/fogos.gif');
+		background-position: top;
+	}
+
+	p {
+		font-size: 1.5em;
+		color: black;
+		background-color: white;
+		padding: 8px 16px;
+		border-radius: 6px;
+	}
+
+	#final-message {
+		font-weight: bold;
+		margin-top: 1em;
+		color: #007bff;
+		background-color: white;
+		padding: 8px 16px;
+		border-radius: 6px;
+	}
+
+	
+	a {
+		display: inline-block;
+		margin-top: 20px;
+		text-decoration: none;
+		color: #007bff;
+		background: rgba(255, 255, 255, 0.9);
+		border: 2px solid white;
+		padding: 12px 24px;
+		font-size: 1.2em;
+		font-weight: bold;
+		border-radius: 10px;
+		transition: 0.3s;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+	}
+
+	a:hover {
+		background: white;
+		color: #0056cc;
+		transform: scale(1.05);
+	}
+	</style>
+</head>
+<body>
+	<h1>PARABÉNS!</h1>
+	<p>Você concluiu o jogo da memória do Cavaleiro das Trevas!</p>
+	<p id="final-message"></p>
+
+	<a href="inicio.html">🦇 Selecionar novo jogo</a>
+
+	<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const finalMessage = document.getElementById('final-message');
+		const playerName = localStorage.getItem('finalPlayerName');
+		const finalTime = localStorage.getItem('finalTime');
+
+		if (playerName && finalTime) {
+			finalMessage.textContent = `${playerName}, você completou o jogo em ${finalTime} segundos!`;
+		} else {
+			finalMessage.textContent = 'Informações de pontuação não encontradas.';
+		}
+
+		// Limpa as chaves temporárias para a próxima jogada
+		localStorage.removeItem('finalPlayerName');
+		localStorage.removeItem('finalTime');
+	});
+	</script>
+</body>
+</html>

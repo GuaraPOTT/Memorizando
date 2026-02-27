@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Memorizando</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #bd0000, #000000);
+      color: white;
+    }
+
+    .container {
+      text-align: center;
+      backdrop-filter: blur(15px);
+      background: rgba(255, 255, 255, 0.1);
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      width: 90%;
+      max-width: 900px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 40px;
+      font-weight: 300;
+      opacity: 0.9;
+    }
+
+    .games {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      border-radius: 20px;
+      width: 250px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .card h2 {
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 50px;
+      background: white;
+      color: #764ba2;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #eee;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media(max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>🧠 Memorizando</h1>
+    <p>Escolha um desafio e teste sua memória!</p>
+
+    <div class="games">
+
+      <div class="card">
+        <h2>HOMEM-ARANHA</h2>
+        <p>Encontre os pares do amigão da vizinhança!</p>
+        <a href="index2.html" class="btn">Jogar  </a>
+      </div>
+
+      <div class="card">
+        <h2>O BATMAN</h2>
+        <p>Encontre os pares dos parceiros do cavaleiro das trevas!</p>
+        <a href="Index.html" class="btn">Jogar </a>
+      </div>
+
+    </div>
+
+    <footer>
+      © 2026 Memorizando - Todos os direitos reservados à Guará Games
+    </footer>
+  </div>
+
+</body>
+</html>
