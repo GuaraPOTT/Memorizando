@@ -97,7 +97,7 @@ const createCard = (character) => {
 	const card = createElement('div', 'card');
 	const front = createElement('div', 'face front');
 	const back = createElement('div', 'face back');
-	front.style.backgroundImage = `url('images3/${character}.jpg')`;
+	front.style.backgroundImage = `url('Images3/${character}.jpg')`;
 	card.appendChild(front);
 	card.appendChild(back);
 	card.addEventListener('click', revealCard);
@@ -128,4 +128,5 @@ window.onload = () => {
     spanPlayer.innerHTML = player;
     startTimer();
     loadGame();
+
 }
